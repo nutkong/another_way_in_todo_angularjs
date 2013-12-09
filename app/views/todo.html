@@ -1,0 +1,22 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+  </ul>
+  <h3 class="text-muted">TodoAngularApp</h3>
+</div>
+
+<div class="row marketing">
+  <form ng-init="init()" ng-submit="formSubmitted()">
+      <input type="text" ng-model="newDescription" placeholder="type new item here">
+      <ul>
+          <li ng-repeat="item in items" class="{{ item.css() }}">
+              <input type="checkbox" ng-model="item.done">
+              {{ item.description }}
+          </li>
+      </ul>
+  </form>
+</div>
+
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div>
